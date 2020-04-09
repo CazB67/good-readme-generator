@@ -3,7 +3,7 @@ const axios = require("axios");
 const inquirer = require("inquirer");
 const util = require("util");
 
-//const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 //const queryUrl = `https://api.github.com/users/${username}/`;
 // https://api.github.com/users/cazb67
@@ -96,7 +96,7 @@ function generateReadMe(answers) {
     
     ## Usage
     ${answers.usage}
-    ${answers.usage-screenshot}
+    
     
     ## License
     ${answers.choices}
@@ -112,6 +112,15 @@ function generateReadMe(answers) {
     {Image}`;
   }
 
-  promptUser();
+  promptUser()
+  .then(function(answers) {
+    const md = generateReadMe(answers);
 
-    
+    return writeFileAsync("README.md", md);
+  })
+  .then(function() {
+    console.log("Successfully wrote to README.md");
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
