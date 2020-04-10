@@ -10,53 +10,54 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
     return inquirer.prompt([
-        {
-        type: "input",
-        name: "username",
-        message: "What is your gitHub username?",
-        },
+       
 
         {
         type: "input",
         name: "repository",
         message: "What is the name of the gitHub repository for this project?",
-        },
+        default: "good-readme-generator"
+      },
+
       {
         type: "input",
         name: "title",
         message: "What is the title of your project?"
       },
+
       {
-        type: "input",
+        type: "editor",
         name: "description",
-        message: "Describe your project?"
+        message: "Describe your project?",
+        default: "blah"
       },
+
       {
         type: "editor",
         name: "installation",
-        message: "What are the steps required to install project?"
+        message: "What are the steps required to install project?",
+        default: "blah"
       },
+
       {
         type: "editor",
         name: "usage",
-        message: "Provide instructions for use."
-      },
-      {
-        type: "input",
-        name: "usage-screenshot",
-        message: "Do you want to add a screenshot or gif of your project?",
-        choices: [
-            "Yes", 
-            "No"
-          ]
-
+        message: "Provide instructions for use.",
+        default: "blah"
       },
       
       {
-        type: "input",
+        type: "editor",
         name: "tests",
         message: "Write tests for you application",
+        default: "blah"
       },
+      {
+        type: "input",
+        name: "username",
+        message: "What is your gitHub username?",
+        default: "cazb67"
+        }
 
     ]);
   }
@@ -84,7 +85,6 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
-
 ![License](https://img.shields.io/github/license/${answers.username}/${answers.repository}?style=flat-square)
 
 ## Contributing
@@ -98,42 +98,25 @@ ${answers.tests}
 
 ![Profile Image](${answers.profileImage})`;
   }
-/*
-  promptUser()
-  .then(function(answers) {
-    getProfileImage(answers.username);
-    console.log(x);
-    const md = generateReadMe(answers);
-    return writeFileAsync("README.md", md);
-  })
-  .then(function() {
-    console.log("Successfully wrote to README.md");
-  })
-  .catch(function(err) {
-    console.log(err);
-  });
-  */
-
-
 
   async function go() {
+
+    
       const answers = await promptUser();
       answers.profileImage = await getProfileImage(answers.username);
       const md = await generateReadMe(answers)
       await writeFileAsync("generatedREADME.md", md);
   }
 
-
   async function getProfileImage(username) {
     console.log(username);
     try {
     
-    const queryUrl = `https://api.github.com/users/${username.toLowerCase()}`;
-    console.log(queryUrl);
-    const gitHubProfile = await axios.get(queryUrl); 
-    console.log("gitHubProfile " + gitHubProfile.data.avatar_url);
-    return gitHubProfile.data.avatar_url;
-        
+      const queryUrl = `https://api.github.com/users/${username.toLowerCase()}`;
+      console.log(queryUrl);
+      const gitHubProfile = await axios.get(queryUrl); 
+      console.log("gitHubProfile " + gitHubProfile.data.avatar_url);
+      return gitHubProfile.data.avatar_url;
 
     }
     catch (err) {
@@ -141,4 +124,26 @@ ${answers.tests}
     }
 
   }
+
+  /*
+  async function getEmail() {
+    console.log();
+    try {
+    
+      const queryUrl = `https://api.github.com/users/${username.toLowerCase()}`;
+      console.log(queryUrl);
+      const gitHubProfile = await axios.get(queryUrl); 
+      
+      return ;
+
+    }
+    catch (err) {
+        console.log("Err: " + err);
+    }
+
+  }*/
+
+  
   go()
+
+  
