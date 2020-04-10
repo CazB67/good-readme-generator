@@ -133,7 +133,7 @@ ${answers.tests}
       const answers = await promptUser();
       answers.profileImage = await getProfileImage(answers.username);
       const md = await generateReadMe(answers)
-      await writeFileAsync("README.md", md);
+      await writeFileAsync("generatedREADME.md", md);
   }
 
 
