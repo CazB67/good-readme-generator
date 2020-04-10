@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.19.2",
+    "electron-pdf": "^7.0.0",
     "inquirer": "^7.1.0"
   },
   "devDependencies": {},

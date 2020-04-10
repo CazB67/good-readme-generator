@@ -65,11 +65,8 @@ function generateReadMe(answers) {
     return `
 # ${answers.title}
 ## Description
-
 ${answers.description}
-
 ## Table of Contents
-
 1. [Installation](#Installation)
 2. [Usage](#Usage)
 3. [Licence](#License)
@@ -77,23 +74,17 @@ ${answers.description}
 5. [Tests](#Tests)
 6. [Questions](#Questions)
 ## Installation
-
+${answers.installation}
 ## Usage
 ${answers.usage}
-
 ## License
-
-![License](https://img.shields.io/github/license/${answers.username}/${answers.repository}?style=flat-square)
-
+![License](https://img.shields.io/github/license/${answers.username}/${answers.repository})
 ## Contributing
-
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 ## Tests
-
 ${answers.tests}
-
 ## Questions
 {Email}
-
 ![Profile Image](${answers.profileImage})`;
   }
 /*
