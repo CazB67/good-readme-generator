@@ -52,6 +52,7 @@ function promptUser() {
         message: "Write tests for you application",
         default: "blah"
       },
+
       {
         type: "input",
         name: "username",
@@ -88,9 +89,9 @@ ${answers.usage}
 ![License](https://img.shields.io/github/license/${answers.username}/${answers.repository}?style=flat-square)
 
 ## Contributing
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## Tests
-
 ${answers.tests}
 
 ## Questions
