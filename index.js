@@ -5,7 +5,7 @@ const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-//const queryUrl = `https://api.github.com/users/${username}/`;
+
 // https://api.github.com/users/cazb67
 
 function promptUser() {
@@ -41,7 +41,7 @@ function promptUser() {
 
       },
       {
-        type: "input",
+        type: "checkbox",
         name: "license",
         message: "Choose a license.",
         choices: [
@@ -52,7 +52,7 @@ function promptUser() {
           ]
       },
       {
-        type: "input",
+        type: "list",
         name: "contributing",
         message: "Would you like other developers to contribute to you project",
         choices: [
@@ -69,7 +69,7 @@ function promptUser() {
 
       {
         type: "input",
-        name: "questions",
+        name: "username",
         message: "What is your gitHUb username?",
       },
     ]);
@@ -108,11 +108,13 @@ ${answers.tests}
 
 ## Questions
 {Email}
-{Image}`;
+![Profile Image](${answers.profileImage})`;
   }
-
+/*
   promptUser()
   .then(function(answers) {
+    getProfileImage(answers.username);
+    console.log(x);
     const md = generateReadMe(answers);
 
     return writeFileAsync("README.md", md);
@@ -123,3 +125,33 @@ ${answers.tests}
   .catch(function(err) {
     console.log(err);
   });
+  */
+
+
+
+  async function go() {
+      const answers = await promptUser();
+      answers.profileImage = await getProfileImage(answers.username);
+      const md = await generateReadMe(answers)
+      await writeFileAsync("README.md", md);
+  }
+
+
+  async function getProfileImage(username) {
+    console.log(username);
+    try {
+    
+    const queryUrl = `https://api.github.com/users/${username.toLowerCase()}`;
+    console.log(queryUrl);
+    const gitHubProfile = await axios.get(queryUrl); 
+    console.log("gitHubProfile " + gitHubProfile.data.avatar_url);
+    return gitHubProfile.data.avatar_url;
+        
+
+    }
+    catch (err) {
+        console.log("Err: " + err);
+    }
+
+  }
+  go();
