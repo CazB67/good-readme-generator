@@ -76,7 +76,9 @@ ${answers.description}
 4. [Contributing](#Contributing)
 5. [Tests](#Tests)
 6. [Questions](#Questions)
+
 ## Installation
+${answers.installation}
 
 ## Usage
 ${answers.usage}
