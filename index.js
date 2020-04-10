@@ -54,7 +54,7 @@ function promptUser() {
       {
         type: "list",
         name: "contributing",
-        message: "Would you like other developers to contribute to you project",
+        message: "Would you like other developers to contribute to you project?",
         choices: [
             "Yes", 
             "No"
@@ -99,6 +99,7 @@ ${answers.usage}
 
 ## License
 ${answers.choices}
+![Eclipse Marketplace](https://img.shields.io/eclipse-marketplace/last-update/generatedREADME?style=flat-square)
 
 ## Contributing
 {Text}
