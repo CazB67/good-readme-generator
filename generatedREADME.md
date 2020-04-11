@@ -34,8 +34,15 @@ The task was to create a command-line application that dynamically generates a R
 5. Call the fs library to write the readme.md file using the information provided.
 
 ## Usage
-The following video shows the application's functionality
-![README Generator](readmegenerator.wimp)
+The following images show the application's functionality.
+Initialise the application by typing node index.js into the command line.
+![Start](1.PNG)
+
+You will then be asked a series of questions to answer directly into the command line or your preferred text editor.
+![In Progress](2.PNG)
+
+After all is complete a readme is generated.
+![Result](3.PNG)
 
 This is the link for the generated readme.md file
 https://github.com/CazB67/good-readme-generator/blob/master/generatedREADME.md
