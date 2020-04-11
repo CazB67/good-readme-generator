@@ -15,8 +15,7 @@ function promptUser() {
       {
       type: "input",
       name: "repository",
-      message: "What is the name of the gitHub repository for this project?",
-      default: "good-readme-generator"
+      message: "What is the name of the gitHub repository for this project?"
     },
 
     {
@@ -28,36 +27,31 @@ function promptUser() {
     {
       type: "editor",
       name: "description",
-      message: "Describe your project?",
-      default: "blah"
+      message: "Describe your project?"
     },
 
     {
       type: "editor",
       name: "installation",
-      message: "What are the steps required to install project?",
-      default: "blah"
+      message: "What are the steps required to install project?"
     },
 
     {
       type: "editor",
       name: "usage",
-      message: "Provide instructions for use.",
-      default: "blah"
+      message: "Provide instructions for use."
     },
     
     {
       type: "editor",
       name: "tests",
-      message: "Write tests for you application",
-      default: "blah"
+      message: "Write tests for you application"
     },
 
     {
       type: "input",
       name: "username",
-      message: "What is your gitHub username?",
-      default: "cazb67"
+      message: "What is your gitHub username?"
       }
 
   ]);

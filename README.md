@@ -33,7 +33,7 @@ The task was to create a command-line application that dynamically generates a R
 
 ## Usage
 The following video shows the application's functionality
-![README Generator]()
+![README Generator](readmegenerator.WIMP)
 
 This is the link for the generated readme.md file
 https://github.com/CazB67/good-readme-generator/blob/master/generatedREADME.md

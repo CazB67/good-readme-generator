@@ -1,8 +1,21 @@
 
-# Hi
+# Good Readme Generator
 ## Description
 
-blah
+The task was to create a command-line application that dynamically generates a README.md from a user's input. The readme needed to be invoked with the command
+`node index.js` and populated with the following:
+* At least one badge
+* Project title
+* Description
+* Table of Contents
+* Installation
+* Usage
+* License
+* Contributing
+* Tests
+* Questions
+* User GitHub profile picture
+* User GitHub email
 
 ## Table of Contents
 
@@ -14,10 +27,21 @@ blah
 6. [Questions](#Questions)
 
 ## Installation
-blah
+1. Install the axios and inquirer dependencies and initialise the package manager
+2. Create a template literal of the readme.md file
+3. Use inquirer to prompt the user with a series of questions. The answers to the questions are used to popultate the readme.
+4. Make an axios call to the gitHub to get user email and profile picture.
+5. Call the fs library to write the readme.md file using the information provided.
 
 ## Usage
-blah
+The following video shows the application's functionality
+![README Generator](readmegenerator.wimp)
+
+This is the link for the generated readme.md file
+https://github.com/CazB67/good-readme-generator/blob/master/generatedREADME.md
+
+This is the URL of the gitHub repository
+https://github.com/CazB67/good-readme-generator
 
 ## License
 ![License](https://img.shields.io/github/license/cazb67/good-readme-generator?style=flat-square)
@@ -26,7 +50,8 @@ blah
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## Tests
-blah
+tests test tests
+
 
 ## Questions
 null
