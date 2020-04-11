@@ -1,8 +1,9 @@
-
-# Hi
+function generateReadMe(answers) {
+    return `
+# ${answers.title}
 ## Description
 
-blah
+${answers.description}
 
 ## Table of Contents
 
@@ -14,21 +15,24 @@ blah
 6. [Questions](#Questions)
 
 ## Installation
-blah
+${answers.installation}
 
 ## Usage
-blah
+${answers.usage}
 
 ## License
-![License](https://img.shields.io/github/license/cazb67/good-readme-generator?style=flat-square)
+![License](https://img.shields.io/github/license/${answers.username}/${answers.repository}?style=flat-square)
 
 ## Contributing
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## Tests
-blah
+${answers.tests}
 
 ## Questions
-null
+${answers.email}
 
-![Profile Image](https://avatars1.githubusercontent.com/u/58319229?v=4)
+![Profile Image](${answers.profileImage})`;
+  }
+
+module.exports = {generateReadMe: generateReadMe};
