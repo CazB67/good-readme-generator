@@ -95,7 +95,7 @@ ${answers.usage}
 ${answers.tests}
 
 ## Questions
-{Email}
+${answers.email}
 
 ![Profile Image](${answers.profileImage})`;
   }
@@ -105,6 +105,7 @@ ${answers.tests}
     
       const answers = await promptUser();
       answers.profileImage = await getProfileImage(answers.username);
+      answers.email = await getEmail(answers.username)
       const md = await generateReadMe(answers)
       await writeFileAsync("generatedREADME.md", md);
   }
@@ -126,23 +127,22 @@ ${answers.tests}
 
   }
 
-  /*
-  async function getEmail() {
-    console.log();
+  
+  async function getEmail(username) {
     try {
     
       const queryUrl = `https://api.github.com/users/${username.toLowerCase()}`;
       console.log(queryUrl);
-      const gitHubProfile = await axios.get(queryUrl); 
+      const gitHubEmail = await axios.get(queryUrl); 
       
-      return ;
+      return gitHubEmail.data.email;
 
     }
     catch (err) {
         console.log("Err: " + err);
     }
 
-  }*/
+  }
 
   
   go()
