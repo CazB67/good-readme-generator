@@ -1,5 +1,5 @@
 # Good Readme Generator
-Node.js and ES6 \ 
+Node.js and ES6 
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/good-readme-generator) 
 
