@@ -1,6 +1,6 @@
 # Good Readme Generator
 Node.js and ES6
-![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/good-readme-generator)
+`![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/good-readme-generator)`
 
 ## Description
 The task was to create a command-line application that dynamically generates a README.md from a user's input. The readme needed to be invoked with the command
