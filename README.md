@@ -54,7 +54,8 @@ https://github.com/CazB67/good-readme-generator
 NPM, Node js, fs, axios, inquirer, Javascript, util
 
 ## Credits
-Team at UWA Coding Bootcamp
+- Team at UWA Coding Bootcamp
+- https://shields.io/ for the badges
 
 ## License
 ![License](https://img.shields.io/github/license/cazb67/good-readme-generator?style=flat-square)
