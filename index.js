@@ -89,7 +89,6 @@ async function getEmail(username) {
     const queryUrl = `https://api.github.com/users/${username.toLowerCase()}`;
     console.log(queryUrl);
     const gitHubEmail = await axios.get(queryUrl); 
-    
     return gitHubEmail.data.email;
 
   }
