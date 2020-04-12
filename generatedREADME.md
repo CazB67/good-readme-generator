@@ -1,7 +1,7 @@
 
 # Good Readme Generator
+![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/good-readme-generator)
 ## Description
-
 The task was to create a command-line application that dynamically generates a README.md from a user's input. The readme needed to be invoked with the command
 `node index.js` and populated with the following:
 * At least one badge
@@ -16,9 +16,7 @@ The task was to create a command-line application that dynamically generates a R
 * Questions
 * User GitHub profile picture
 * User GitHub email
-
 ## Table of Contents
-
 1. [Installation](#Installation)
 2. [Usage](#Usage)
 3. [Licence](#License)
@@ -57,8 +55,7 @@ https://github.com/CazB67/good-readme-generator
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## Tests
-No tests yet.
-
+No tests to write
 
 ## Questions
 null

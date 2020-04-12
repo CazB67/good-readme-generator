@@ -1,12 +1,10 @@
 function generateReadMe(answers) {
     return `
 # ${answers.title}
+![GitHub repo size](https://img.shields.io/github/repo-size/${answers.username}/${answers.repository})
 ## Description
-
 ${answers.description}
-
 ## Table of Contents
-
 1. [Installation](#Installation)
 2. [Usage](#Usage)
 3. [Licence](#License)
