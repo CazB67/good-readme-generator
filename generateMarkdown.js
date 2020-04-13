@@ -2,6 +2,7 @@ function generateReadMe(answers) {
     return `
 # ${answers.title} 
 ![GitHub repo size](https://img.shields.io/github/repo-size/${answers.username}/${answers.repository})
+![GitHub issues](https://img.shields.io/github/issues/${answers.username}/${answers.repository})
 ## Description
 ${answers.description}
 ## Table of Contents
