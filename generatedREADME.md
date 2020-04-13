@@ -2,6 +2,7 @@
 # Good Readme Generator
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/good-readme-generator) 
+![GitHub issues](https://img.shields.io/github/issues/cazb67/good-readme-generator)
 ## Description
 The task was to create a command-line application that dynamically generates a README.md from a user's input. The readme needed to be invoked with the command
 `node index.js` and populated with the following:
@@ -49,8 +50,11 @@ https://github.com/CazB67/good-readme-generator/blob/master/generatedREADME.md
 This is the URL of the gitHub repository
 https://github.com/CazB67/good-readme-generator
 
+This is a link to a video demonstrating the application's functionality
+https://drive.google.com/open?id=1wCr12_mFlddF76uBevxP8vW-vqneZMqZ
+
 ## License
-![License](https://img.shields.io/github/license/cazb67/good-readme-generator?style=flat-square)
+![License](https://img.shields.io/github/license/cazb67/good-readme-generator)
 
 ## Contributing
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)

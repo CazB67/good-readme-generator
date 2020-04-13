@@ -2,6 +2,7 @@
 Node.js and ES6 
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/good-readme-generator) 
+![GitHub issues](https://img.shields.io/github/issues/cazb67/good-readme-generator)
 
 ## Description
 The task was to create a command-line application that dynamically generates a README.md from a user's input. The readme needed to be invoked with the command
@@ -50,6 +51,9 @@ https://github.com/CazB67/good-readme-generator/blob/master/generatedREADME.md
 This is the URL of the gitHub repository
 https://github.com/CazB67/good-readme-generator
 
+This is a link to a video demonstrating the application's functionality
+https://drive.google.com/open?id=1wCr12_mFlddF76uBevxP8vW-vqneZMqZ
+
 ## Technologies
 NPM, Node js, fs, axios, inquirer, Javascript, util
 
@@ -57,8 +61,11 @@ NPM, Node js, fs, axios, inquirer, Javascript, util
 - Team at UWA Coding Bootcamp
 - https://shields.io/ for the badges
 
+## Bugs and Fixes
+- To get the gitHub user's email through the gitHub API, I need to learn how to deal with authentication issues.
+
 ## License
-![License](https://img.shields.io/github/license/cazb67/good-readme-generator?style=flat-square)
+![License](https://img.shields.io/github/license/cazb67/good-readme-generator)
 
 
 
