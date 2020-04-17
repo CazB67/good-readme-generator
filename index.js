@@ -6,8 +6,6 @@ const genererateMD = require("./generateMarkdown.js");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-
-// https://api.github.com/users/cazb67
 function promptUser() {
   return inquirer.prompt([
      
@@ -58,7 +56,6 @@ function promptUser() {
 }
 
 async function go() {
-    
   const answers = await promptUser();
   answers.profileImage = await getProfileImage(answers.username);
   answers.email = await getEmail(answers.username)
@@ -87,10 +84,8 @@ async function getEmail(username) {
   try {
   
     const queryUrl = `https://api.github.com/users/${username.toLowerCase()}`;
-    console.log(queryUrl);
     const gitHubEmail = await axios.get(queryUrl); 
-    //console.log(gitHubEmail.data[0].payload.commits[0].author.email);
-    return gitHubEmail.data.email;
+    return gitHubEmail.data.email || "";
 
   }
     catch (err) {
