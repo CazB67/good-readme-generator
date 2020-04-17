@@ -45,6 +45,11 @@ function promptUser() {
       name: "tests",
       message: "Write tests for you application"
     },
+    {
+      type: "input",
+      name: "email",
+      message: "What email would you like to be contacted on?"
+    },
 
     {
       type: "input",
@@ -58,8 +63,7 @@ function promptUser() {
 async function go() {
   const answers = await promptUser();
   answers.profileImage = await getProfileImage(answers.username);
-  answers.email = await getEmail(answers.username)
-  const md = await genererateMD.generateReadMe(answers)
+  const md = genererateMD.generateReadMe(answers)
   await writeFileAsync("generatedREADME.md", md);
 }
 
@@ -80,19 +84,6 @@ catch (err) {
 
 }
 
-async function getEmail(username) {
-  try {
-  
-    const queryUrl = `https://api.github.com/users/${username.toLowerCase()}`;
-    const gitHubEmail = await axios.get(queryUrl); 
-    return gitHubEmail.data.email || "";
-
-  }
-    catch (err) {
-    console.log("Err: " + err);
-  }
-
-}
   
   go()
 

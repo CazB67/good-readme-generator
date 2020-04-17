@@ -29,7 +29,7 @@ ${answers.usage}
 ${answers.tests}
 
 ## Questions
-${answers.email}
+If you have any questions about the repo, open an issue or contact me directly at ${answers.email}.
 
 ![Profile Image](${answers.profileImage})`;
   }

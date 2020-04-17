@@ -59,9 +59,13 @@ https://drive.google.com/open?id=1wCr12_mFlddF76uBevxP8vW-vqneZMqZ
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## Tests
-No tests to write
+To run tests, run the following command:
+​
+```
+npm test
+```
 
 ## Questions
-
+If you have any questions about the repo, open an issue or contact me directly at example@gmail.com
 
 ![Profile Image](https://avatars1.githubusercontent.com/u/58319229?v=4)
