@@ -41,7 +41,7 @@ function promptUser() {
     },
     
     {
-      type: "editor",
+      type: "input",
       name: "tests",
       message: "Write tests for you application"
     },
