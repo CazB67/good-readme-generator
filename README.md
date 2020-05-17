@@ -1,5 +1,5 @@
 # Good Readme Generator
-Node.js and ES6 
+A command-line application that dynamically generates a README.md from a user's input using Node.js and ES6
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/good-readme-generator) 
 ![GitHub issues](https://img.shields.io/github/issues/cazb67/good-readme-generator)
